@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="spotifyweb.js">
+   
+    <link rel="stylesheet" href="spotifyweb1.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/2e7ad8a127.js" crossorigin="anonymous"></script>     
+    <body>
+
+        <h1 class ="smallscreen "> please use a big srceen</h1>
+    <div id="fullbackg"  class="background"><!--full background-->
+        <div class="fixed text-white d-flex flex-column justify-content-end">
+            <i id="zoom" class="fa-solid fa-magnifying-glass-plus"></i>
+            <i id="zoomout" class="fa-solid fa-magnifying-glass-minus"></i>
+        </div> 
+   
+        <div class="d-flex flex-row"><!--full background element arranging in row-->
+            <div  id="section1" class="d-flex flex-column section1 "><!--left part full background-->
+                <div id="L_card1" class="L_card1  d-flex flex-column"><!--left section1 card1-->
+                   
+                    <div id="home" class="d-flex flex-row  ">
+                        <i class="L_card1_icon text-white fa-solid fa-house"></i>
+                        <p id="home_p" class="L_card1_p1 text-white">Home</p>
+                    </div>
+    
+                    <div id="search" class="d-flex flex-row  ">
+                        <i class="L_card1_icon2 fa-solid fa-magnifying-glass"></i>
+                        <p id="search_p" class="L_card1_p2 text-white">Search</p>
+                    </div>
+    
+                </div><!--left section1 card1 end-->
+
+        <!--left section1 card1 end--> 
+
+                <div id="L_card2" class="L_card2  d-flex flex-column"><!--left section1 card2 -->
+
+                    <div class="d-flex flex-row  "> 
+                        <i id="libraryicon" class="L_card1_icon text-white fa-solid fa-layer-group"></i>
+                        <p id="library_p" class="L_card1_p1 text-white">Your Library</p>
+                        <h1 id="library_h1" class="L_card1_p2 ml-auto mr-3  text-white">+</h1>
+                    </div>
+
+                    <div id="Library_list" class=" d-flex flex-row justify-content-between text-white">
+                        <p class="backgdesgintg ml-3 Librarypara">Playlist</p>
+                        <p class="backgdesgintg Librarypara">Artists</p>
+                        <p class="backgdesgintg Librarypara">Albums</p>
+                        <p class="backgdesgintg Librarypara mr-3">Podcasts & Shows</p>    
+                    </div>
+
+                    <div id="leftcart2albumcart" class="leftcart2albumcart d-flex flex-column"> <!-- from here leftcart2albumcart-->
+                        <div class="d-flex flex-row justify-content-between">
+                            <!-- here need to add search icon-->
+                            <i id="Library_serch" class="L_card1_icon2 fa-solid fa-magnifying-glass"></i>
+        
+                            <select id="options" class="bg-transparent text-white mr-3">
+                                <option value="no1" class="bg-dark text-white">Recents</option>
+                                <option class="bg-dark text-white">Recently Added</option>
+                                <option class="bg-dark text-white">Alphabetical</option>
+                                <option class="bg-dark text-white">Creator</option>
+                            </select>
+                        </div>
+        
+                        <div id="playlistcart1" class="d-flex flex-row  leftalbumcart backgdesgintg ">
+                            <img id="playlist_img1" class="leftalbumpic" src="https://i.scdn.co/image/ab67706c0000da8444b0b7d182e6e7cd0e6f15b5" >
+                            <div id="playlist_text1">
+                                <h1 class="leftalbumh1">Liked Songs</h1>
+                                <p class="leftalbum_p"> <i class="text-success mr-2 pin leftalbum_p fa-solid fa-thumbtack"> </i>
+                            Playlist.7 songs</p> 
+                            </div>
+                        </div>
+        
+                        <div id="playlistcart2" class="d-flex flex-row  leftalbumcart backgdesgintg    ">
+                            <img id="playlist_img2" class="leftalbumpic" src="https://images.8tracks.com/cover/i/009/974/694/palm_tree_by_wossen-d8siq3i-1-2729.jpg?rect=150,0,600,600&q=98&fm=jpg&fit=max" >
+                            <div id="playlist_text2" >
+                                <h1 class="leftalbumh1">Your Episodes</h1>
+                                <p class="leftalbum_p"> <i class="text-success mr-2 pin leftalbum_p fa-solid fa-thumbtack"> </i>
+                            Saved & downloaded episodes</p> 
+                            </div>
+                        </div>
+        
+                        <div id="playlistcart3" class="d-flex flex-row  leftalbumcart backgdesgintg  order-1 ">
+                            <img id="playlist_img3" class="leftalbumpic" src="https://m.media-amazon.com/images/M/MV5BZmNlZThlZmItZWVjYi00MDg5LTg4NzctZWE4Y2ViY2Q5MTBmXkEyXkFqcGdeQXVyMzc4ODk0NTc@._V1_.jpg" >
+                            <div id="playlist_text3">
+                                <h1 class="leftalbumh1">Gang Leader (Original
+                                    Motion Picture 
+                                    Soundtrack)</h1>
+                                <p class="leftalbum_p">  Album. Anirudh Ravichandra</p> 
+                            
+                            </div>
+                        </div>
+        
+                        <div id="playlistcart4" class="d-flex flex-row  leftalbumcart backgdesgintg  order-1 ">
+                            <img id="playlist_img4" class="leftalbumpic ArtSist" src="https://i.scdn.co/image/ab6761610000e5eb339fc4fb0bf1ddd5cd420d60" >
+                            <div id="playlist_text4" >
+                                <h1 class="leftalbumh1">Yo Yo Honey Singh</h1>
+                                <p class="leftalbum_p">  ArtSist</p> 
+                            
+                            </div>
+                        </div>
+        
+                        <div id="playlistcart5" class="d-flex flex-row  leftalbumcart backgdesgintg  order-1 ">
+                            <img id="playlist_img5" class="leftalbumpic" src="https://w0.peakpx.com/wallpaper/584/181/HD-wallpaper-prabhas-ki-smile-prabhas-ki-smile-thumbnail.jpg" >
+                            <div id="playlist_text5" >
+                                <h1 class="leftalbumh1">Prabhas collection</h1>
+                                <p class="leftalbum_p">  Album</p> 
+                            
+                            </div>
+                        </div>
+        
+                        <div id="playlistcart6" class="d-flex flex-row  leftalbumcart backgdesgintg  order-1 ">
+                            <img id="playlist_img6" class="leftalbumpic ArtSist" src="https://i.pinimg.com/736x/e8/d0/9d/e8d09dc7491d9801c8edb409a40186c7.jpg" >
+                            <div id="playlist_text6" >
+                                <h1 class="leftalbumh1">Arjit Singh Hits</h1>
+                                <p class="leftalbum_p">  ArtSist</p> 
+                            
+                            </div>
+                        </div>
+        
+                        <div id="playlistcart7" class="d-flex flex-row  leftalbumcart backgdesgintg  order-1 ">
+                            <img id="playlist_img7" class="leftalbumpic" src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/64c72857183915.59cbcc586d1d1.jpg" >
+                            <div id="playlist_text7" >
+                                <h1 class="leftalbumh1">Coding Music</h1>
+                                <p class="leftalbum_p"> Album</p> 
+                            
+                            </div>
+                        </div>
+        
+                        <div id="playlistcart8" class="d-flex flex-row  leftalbumcart backgdesgintg  order-1 ">
+                            <img id="playlist_img8" class="leftalbumpic" src="https://f4.bcbits.com/img/0021607499_10.jpg" >
+                            <div id="playlist_text8" >
+                                <h1 class="leftalbumh1">DJ Hits</h1>
+                                <p class="leftalbum_p">  Album</p> 
+                            
+                            </div>
+                        </div>
+        
+                        <div id="playlistcart9" class="d-flex flex-row  leftalbumcart backgdesgintg  order-1 ">
+                            <img id="playlist_img9" class="leftalbumpic" src="https://i.scdn.co/image/ab67706f000000035e98bc8db32dc5981d0df665" >
+                            <div id="playlist_text9" >
+                                <h1 class="leftalbumh1">80s Hits</h1>
+                                <p class="leftalbum_p">  Album</p> 
+                            
+                            </div>
+                        </div>
+        
+                        <div id="playlistcart10" class="d-flex flex-row  leftalbumcart backgdesgintg  order-1 ">
+                            <img id="playlist_img10" class="leftalbumpic" src="https://i.scdn.co/image/ab67706c0000bebb1bb74499de809948c691bbf9" >
+                            <div id="playlist_text10" >
+                                <h1 class="leftalbumh1">Telugu Feel Good Songs</h1>
+                                <p class="leftalbum_p">  Album</p> 
+                            
+                            </div>
+                        </div>
+        
+                        <div id="playlistcart11" class="d-flex flex-row  leftalbumcart backgdesgintg  order-1 ">
+                            <img id="playlist_img11" class="leftalbumpic" src="https://c-cl.cdn.smule.com/rs-s83/arr/75/74/0f19da6d-7bec-4b06-b75c-e2474128dd97.jpg" >
+                            <div id="playlist_text11" >
+                                <h1 class="leftalbumh1">Nekem Kavalo Cheppu</h1>
+                                <p class="leftalbum_p">  Album.Yentha Vadu Gani</p> 
+                            
+                            </div>
+                        </div>
+        
+                        <div id="playlistcart12" class="d-flex flex-row  leftalbumcart backgdesgintg   order-1 ">
+                            <img id="playlist_img12" class="leftalbumpic"  src="https://e0.pxfuel.com/wallpapers/408/493/desktop-wallpaper-jai-shree-ram-x-rhbb-eu-jai-sree-ram.jpg" >
+                            <div id="playlist_text12">
+                                <h1 class="leftalbumh1"> shree ram bhajan </h1>
+                                <p class="leftalbum_p">  Album</p> 
+                            
+                            </div>
+                        </div>
+        
+        
+                    </div><!-- from here playlistcart end tag-->  
+        
+    
+                    
+
+
+                </div><!--left section1 card2 end-->
+
+
+               
+
+        </div><!--left part full background end-->
+
+            <div id="section2" class="d-flex flex-column section2"><!--right part full background-->
+
+
+                <div id="navibar" class="navibar d-flex flex-row justify-content-between"><!--navibar-->
+                    <div class=" d-flex flex-row ">
+                        <div class=" arrowmargin">
+                        <button  class=" arrowsize fa-solid fa-angle-left"></button>
+                        <button  class=" arrowsize fa-solid fa-angle-right"></button>
+                        </div>
+                    </div>
+                        <input class=" inputs d-none"  type="text" placeholder=" What do you want to listen to?">
+                        <button class="btnsupgrade ">Upgrade </button>
+                        <button class="btns "><i class="fa-regular fa-circle-down mr-2"></i>Install App</button>
+                        <img class=" dppic " src="data:image/png;base64,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">
+ 
+
+                </div><!--navibar end-->
+
+                <!--right carts container --><h1 class="mt-5 ml-4 mr-4 mb-2 text-white heading">Good afternoon</h1>
+            <div id="R_card1">    
+                <div class="d-flex flex-row justify-content-between mr-4 ml-4">
+                    <div class="d-flex flex-row  rightsidesongcart">
+                        <img class="rightsidesongpic" src="https://c.saavncdn.com/735/Naa-Madhi-From-Thiru-Telugu-2022-20220819131251-500x500.jpg" >
+                        
+                            <h1 class="rightsidesongtext">Thiru (Telugu songs)</h1>
+                             
+                        
+                        
+                    </div>
+
+                    <div class="d-flex flex-row rightsidesongcart  ">
+                        <img class="rightsidesongpic" src="https://i.pinimg.com/originals/48/ef/5e/48ef5e641deadffae9e55d88e4296cdd.jpg" >
+                       
+                            <h1 class="rightsidesongtext">PawanKalyan Vinatge</h1>
+                            
+                        
+                        
+                    </div>
+                </div>
+
+                <div class="d-flex flex-row justify-content-between mr-4 ml-4">
+                    <div class="d-flex flex-row  rightsidesongcart">
+                        <img class="rightsidesongpic" src="data:image/jpeg;base64,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" >
+                        <div >
+                            <h1 class="rightsidesongtext">Discover Weekly</h1>
+                             
+                        
+                        </div>
+                    </div>
+
+                    <div class="d-flex flex-row rightsidesongcart">
+                        <img class="rightsidesongpic" src="https://wallpaperaccess.com/full/4724799.jpg" >
+                       
+                            <h1 class="rightsidesongtext">Balasubramaniam Hits</h1>
+                            
+                        
+                        
+                    </div>
+                </div>
+
+                <div class="d-flex flex-row justify-content-between mr-4 ml-4">
+                    <div class="d-flex flex-row  rightsidesongcart">
+                        <img class="rightsidesongpic" src="https://res.cloudinary.com/practicaldev/image/fetch/s--vv5_U6iI--/c_imagga_scale,f_auto,fl_progressive,h_1080,q_auto,w_1080/https://thepracticaldev.s3.amazonaws.com/i/jse4apmxxuqvxi22wbu8.png" >
+                        <div >
+                            <h1 class="rightsidesongtext">Coding Music</h1>
+                             
+                        
+                        </div>
+                    </div>
+
+                    <div class="d-flex flex-row rightsidesongcart">
+                        <img class="rightsidesongpic" src="https://c.saavncdn.com/479/90-S-All-Time-Telugu-Hits-Telugu-2020-20200815064007-500x500.jpg" >
+                       
+                            <h1 class="rightsidesongtext">90s Melodies </h1>
+                            
+                        
+                        
+                    </div>
+                </div>
+
+            </div>    
+
+                
+           <div id="R_card2" class=" ml-4 mr-4 mt-2 bg-">
+
+            
+
+
+        </div>
+             
+        <div id="R_card3" class="mt-5 ml-4 mr-4 mt-2 bg-">
+
+           <p class="text-white"> Company </p>
+
+        <a href="https://www.spotify.com/in-en/about-us/contact/" target="_blank"> <p class="text-info">About</p> </a>
+        <a href="https://www.lifeatspotify.com/" target="_blank"> <p class="text-info">Jobs</p> </a>
+        <a href="https://newsroom.spotify.com/" target="_blank">  <p class="text-info">For the Record</p> </a>
+        
+          <p class="text-white mt-5">Communities</p> 
+        <a href="https://artists.spotify.com/home" target="_blank">  <p class="text-info ">For Artists</p> 
+        <a href="https://developer.spotify.com/" target="_blank">    <p class="text-info">Developers</p> </a>
+        <a href="https://ads.spotify.com/en-US/" target="_blank">  <p class="text-info">Advertising</p> </a>
+        <a href="https://investors.spotify.com/home/default.aspx" target="_blank">  <p class="text-info">Investors</p> </a>
+        <a href="https://spotifyforvendors.com/" target="_blank">  <p class="text-info">Vendors</p> </a>
+        <a href="https://www.spotify.com/in-en/spotifyforwork/" target="_blank">  <p class="text-info">Spotify for Work</p> </a>
+
+
+            <p class="text-white mt-5">Useful links</p> </a>
+        <a href="https://support.spotify.com/in-en/" target="_blank">  <p class="text-info">Support</p> </a>
+        <a href="https://www.spotify.com/in-en/download/windows/" target="_blank">  <p class="text-info">Free Mobile App</p> </a>
+            
+        <hr class="bg-white mt-5">
+        <div class="d-flex flex-row justify-content-between">
+            <div class="d-flex flex-row justify-content-between">
+                <a href="https://www.spotify.com/in-en/legal/end-user-agreement/" target="_blank" class="text-info mr-2"> Legal</a>
+                <a href="https://www.spotify.com/in-en/privacy" target="_blank" class="text-info mr-2"> Privacy Center</a>
+                <a href="https://www.spotify.com/in-en/legal/privacy-policy/" target="_blank" class="text-info mr-2"> Privacy Policy</a>
+                <a href="https://www.spotify.com/in-en/legal/cookies-policy/" target="_blank" class="text-info mr-2"> Cookies</a>
+            </div>
+            <p class="text-info"> © 2023 Spotify AB</p>
+
+        </div>
+            <div class="d-flex flex-row">
+                <a href="https://www.spotify.com/in-en/legal/privacy-policy/#s3" target="_blank"  class="text-info mr-2">About Ads</a>
+                <a href="https://www.spotify.com/in-en/accessibility" target="_blank"  class="text-info mr-2 mb-5">Accessibility</a>
+            </div>
+        </div>
+
+
+           </div><!--right carts container end-->
+
+           
+
+            </div><!--right part full background end-->
+        
+          
+
+
+            </div><!--right part full backgrounds end-->
+
+
+        </div><!--full background element arranging in row end-->
+    </div><!--full background end-->
+<!--bottom bar--><div id="section3" class="bottombar text-white section3 d-flex flex-row">
+            <div class="d-flex flex-row bottomsongcart">
+                <img class="bottomsongpic" src="https://m.media-amazon.com/images/M/MV5BZmNlZThlZmItZWVjYi00MDg5LTg4NzctZWE4Y2ViY2Q5MTBmXkEyXkFqcGdeQXVyMzc4ODk0NTc@._V1_.jpg" >
+                <div>
+                    <h1 class="bottomsongtext">Gang Leader (Original
+                        Motion Picture
+                        Soundtrack)</h1>
+                    <p class="bottomsongpara">  Album. Anirudh Ravichandra</p> 
+                
+                </div>
+                <div class="d-flex flex-row mt-3">
+                    <i class="fa-regular fa-heart mr-3"></i>
+                    <i class="fa-solid fa-display mr-3"></i>
+                </div>
+            </div>
+            
+            <div class="d-flex flex-row  bottomsongcart">
+                <div class="d-flex flex-row justify-content-between ml-3 mt-3">
+                    <i class="ml-5 fa-solid fa-shuffle"></i>
+                    <i class="ml-5 fa-solid fa-backward-step"></i>
+                    <i class="ml-5 heading  fa-regular fa-circle-pause"></i>
+                    <i class="ml-5 fa-solid fa-forward-step"></i>
+                    <i class="ml-5 fa-solid fa-repeat"></i>
+
+                </div>
+
+
+            </div>
+
+            <div class="d-flex flex-row  bottomsongcart">
+                <div class="d-flex flex-row justify-content-between ml-3 mt-3">
+                    <i class="ml-5 fa-solid fa-microphone"></i>
+                    <i class="ml-5 fa-solid fa-sliders"></i>
+                    <i class="ml-5 fa-solid fa-compact-disc"></i>
+                    <i class="ml-5 fa-solid fa-volume-high"></i>
+
+                </div>
+
+
+            </div>
+        
+        
+        </div>
+       
+
+<!--bottom bar end-->
+
+
+
+  
+    <script src="spotifyweb1.js"></script>
+    <script type="text/javascript" src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/js/ccbp-ui-kit.js"></script>
+
+</body>
+
+</html>
