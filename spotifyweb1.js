@@ -377,22 +377,7 @@ para.textContent=section_1.offsetWidth;
 section_2.appendChild(para);
 
 /* width functions */
-let zoomout =document.getElementById("zoomout")
-zoomout.onclick=function() {
-   let sec1_width = section_1.offsetWidth;
-   let sec2_width = section_1.style.width="20vw"
-   if (sec1_width > sec2_width ) {
-      return 
-     function section1_widthchanges_1() {
-      section_2.style.width="70vw";
-      section_2.style.backgroundColor="white";    
-      section_1.style.width="26vw";
-        
-      }
 
-     
-
-   }
    section1_widthchanges_1();
 
 }
