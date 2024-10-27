@@ -1,2 +1,2 @@
 # spotify.github.io
-https://saisksksk.github.io/spotify.github.io/
+https://my_spotify_web
